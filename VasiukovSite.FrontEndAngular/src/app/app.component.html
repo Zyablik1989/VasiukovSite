@@ -6,7 +6,7 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
+<!--
 <style>
   :host {
     --bright-blue: oklch(51.01% 0.274 263.83);
@@ -175,10 +175,30 @@
       margin-block: 1.5rem;
     }
   }
-</style>
-
+</style> -->
+<link rel="stylesheet" href="..\styles.css">
 <main class="main">
   <div class="content">
+    <div class="top-side">
+      <div class="nav-pills-list">
+        @for (item of
+        [
+        { title: 'Profile', link: 'http://google.com'},
+        { title: 'Cheat sheet', link: 'http://yahoo.com'},
+        { title: 'Blog', link: 'http://duckduckgo.com'},
+        ]
+        ;
+        track $index) {
+          <a
+            class="nav-pill-button"
+            [href]="item.link"
+            target="_blank"
+            rel="opener">
+          <span>{{ item.title}}</span>
+          </a>
+        }
+      </div>
+    </div>
     <div class="left-side">
       <svg
         xmlns="http://www.w3.org/2000/svg"

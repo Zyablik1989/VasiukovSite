@@ -2,5 +2,7 @@ import { bootstrapApplication, provideProtractorTestingSupport } from '@angular/
 import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
 
-bootstrapApplication(AppComponent, appConfig)
+bootstrapApplication(AppComponent,  {
+  providers: [provideProtractorTestingSupport(),]
+})
   .catch((err) => console.error(err));
