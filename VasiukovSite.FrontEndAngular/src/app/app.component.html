@@ -177,11 +177,19 @@
   }
 </style> -->
 <!-- <link rel="stylesheet" href="styles.css"> -->
-<main class="main">
-  <div class="content">
+<!-- <main class="main"> -->
+  <!-- <div class="content">
     <div class="top-side">
       <app-home></app-home>
-      <div class="nav-pills-list">
+      <div>
+        <ul>
+          <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="/about">About</a></li>
+        </ul>
+      </div> -->
+
+      <router-outlet />
+      <!-- <div class="nav-pills-list">
         @for (item of
         [
         { title: 'Profile', link: 'http://google.com'},
@@ -342,8 +350,8 @@
         </a>
       </div>
     </div>
-  </div>
-</main>
+  </div> -->
+<!-- </main> -->
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
@@ -354,4 +362,4 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 
-<router-outlet />
+
