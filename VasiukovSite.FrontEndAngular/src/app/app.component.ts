@@ -7,17 +7,8 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, HomeComponent, AboutComponent],
-  // templateUrl: './app.component.html',
-  template: `
-    <div>
-      <ul>
-        <li><a routerLink="/">Home</a></li>
-        <li><a routerLink="/about">About</a></li>
-      </ul>
-    </div>
-    <router-outlet />
-  `,
+  imports: [RouterOutlet, RouterLink, RouterLinkActive],
+  templateUrl: './app.component.html',
   styleUrl: '../styles.css'
 })
 export class AppComponent {
@@ -32,5 +23,5 @@ export class AppComponent {
 //   template: '<router-outlet />'
 // })
 // export class AppComponent {
-//   title = 'my-first-project';
+//   title = 'vasiukov-website';
 // }
