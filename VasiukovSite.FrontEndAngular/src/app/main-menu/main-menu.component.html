@@ -4,12 +4,49 @@
     Vasiukov Aleksei website
   </b>
 </title> -->
+<div>
+  <ul>
+    <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/home">Home</a></li>
+    <li><a routerLink="/about">About</a></li>
+  </ul>
+</div>
+<div class="nav-pills-list">
+  @for (item of [
+  {title: 'Home', link: '/home'},
+  {title: 'About', link: '/about'}
+  ]
+  ;
+  track $index
+  )
+  {
+    <a
+      class="nav-pill-button"
+      [href]="item.link"
+      target="_blank"
+      rel="opener">
+      <span>{{item.title}}</span>
+    </a>
+  }
+</div>
 
-   <div>
-     <ul>
-       <li><a routerLink="/">Home</a></li>
-       <li><a routerLink="/home">Home</a></li>
-       <li><a routerLink="/about">About</a></li>
-     </ul>
-   </div>
 
+<!--
+  <div class="nav-pills-list">
+        @for (item of
+        [
+        { title: 'Profile', link: 'http://google.com'},
+        { title: 'Cheat sheet', link: 'http://yahoo.com'},
+        { title: 'Blog', link: 'http://duckduckgo.com'},
+        ]
+        ;
+        track $index) {
+          <a
+            class="nav-pill-button"
+            [href]="item.link"
+            target="_blank"
+            rel="opener">
+          <span>{{ item.title}}</span>
+          </a>
+        }
+      </div> -->

@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 //   { path: 'about', component: AboutComponent}
 // ];
 export const routes: Routes = [
-  { path: '', component: MainMenuComponent},
+  { path: '', component: HomeComponent},
   { path: 'home', component: HomeComponent},
   { path: 'about', component: AboutComponent},
 ];
@@ -17,5 +17,6 @@ export const routes: Routes = [
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes)]
 };
+
 
 
