@@ -1,17 +1,17 @@
 import { provideRouter, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
 import { ApplicationConfig } from '@angular/core';
-import { MainMenuComponent } from './main-menu/main-menu.component';
-import { AppComponent } from './app.component';
+import { ProfileComponent } from './profile/profile.component';
+import { CheatsheetComponent } from './cheatsheet/cheatsheet.component';
+import { BlogComponent } from './blog/blog.component';
 // export const routes: Routes = [
 //   { path: '', component: HomeComponent},
 //   { path: 'about', component: AboutComponent}
 // ];
 export const routes: Routes = [
-  { path: '', component: HomeComponent},
-  { path: 'home', component: HomeComponent},
-  { path: 'about', component: AboutComponent},
+  { path: '', component: ProfileComponent},
+  { path: 'profile', component: ProfileComponent},
+  { path: 'cheatsheet', component: CheatsheetComponent},
+  { path: 'blog', component: BlogComponent},
 ];
 
 export const appConfig: ApplicationConfig = {
