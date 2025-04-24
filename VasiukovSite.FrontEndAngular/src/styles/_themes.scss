@@ -1,0 +1,11 @@
+@import '_variables';
+@import '_theme';
+
+body.light-theme {
+  @include theme($light-theme);
+}
+
+body.dark-theme {
+  @include theme($dark-theme);
+}
+

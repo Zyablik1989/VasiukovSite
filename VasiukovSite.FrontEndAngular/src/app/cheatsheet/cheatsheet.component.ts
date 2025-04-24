@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './cheatsheet.component.css'
 })
 export class CheatsheetComponent {
-
+// 123123123123.123.123.123.GetHints()
 }
