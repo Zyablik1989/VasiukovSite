@@ -6,10 +6,11 @@ import {Injectable, Renderer2, RendererFactory2 } from '@angular/core';
 export class ThemeService {
   private renderer: Renderer2;
   private currentTheme = 'dark-theme';
-
   constructor(rendererFactory: RendererFactory2) {
     this.renderer = rendererFactory.createRenderer(null, null);
   }
+
+
 
   setTheme(theme: 'light-theme' | 'dark-theme'){
     const body = document.body;
@@ -22,5 +23,7 @@ export class ThemeService {
   getCurrentTheme(): string {
     return this.currentTheme;
   }
+
+
 }
 

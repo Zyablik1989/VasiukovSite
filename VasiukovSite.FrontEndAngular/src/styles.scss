@@ -1,28 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
 
-/* CUSTOM NAVIGATION */
 :host {
-  // color: var(--pill-accent);
   --bright-blue: oklch(51.01% 0.274 263.83);
-
   --pill-accent: var(--bright-blue);
 
 }
 
-// html  {background-color: lightcoral;}
-
 @media (min-width: 600px) {
   body {
-    // background-color: black;
     padding: 2rem;
   }
 }
 
-
-
 .nav-pills-list{
   display: flex;
-
   flex-direction: row;
   align-items: start;
   flex-wrap: wrap;
@@ -32,15 +22,11 @@
 .nav-pill-button{
   display: flex;
   align-items: center;
-
   padding-inline: 0.75rem;
   padding-block: 0.375rem;
   border-radius: 0.375rem;
   border: 0;
   color: var(--pill-accent);
-
-  // background: darkblue;
-
   transition: background 0.5s ease;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.875rem;
@@ -51,56 +37,8 @@
   text-decoration: none;
 }
 
-
 .nav-pill-button:hover {
-  // background: color-mix(in srgb, var(--pill-accent) 20%, transparent);
-  // background-color: yellow;
   background-color: color-mix(in srgb, var(--pill-accent) 50%, transparent);
-
     // transition: none;
     transition: background 0.5s ease;
-
 }
-
-
-// .nav-pills-list .nav-pill-button:nth-child(6n + 1){
-//   --pill-accent: var(--bright-blue);
-// }
-
-// .nav-pills-list .nav-pill-button:nth-child(6n + 2) {
-//   --pill-accent: var(--french-violet);
-// }
-
-// .pill-group .pill:nth-child(6n + 3),
-// .pill-group .pill:nth-child(6n + 4),
-// .pill-group .pill:nth-child(6n + 5) {
-//   --pill-accent: var(--hot-red);
-// }
-
-// .pill-group {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: start;
-//   flex-wrap: wrap;
-//   gap: 1.25rem;
-// }
-
-// .pill {
-//   display: flex;
-//   align-items: center;
-//   --pill-accent: var(--bright-blue);
-//   background: color-mix(in srgb, var(--pill-accent) 5%, transparent);
-//   color: var(--pill-accent);
-//   padding-inline: 0.75rem;
-//   padding-block: 0.375rem;
-//   border-radius: 2.75rem;
-//   border: 0;
-//   transition: background 0.3s ease;
-//   font-family: var(--inter-font);
-//   font-size: 0.875rem;
-//   font-style: normal;
-//   font-weight: 500;
-//   line-height: 1.4rem;
-//   letter-spacing: -0.00875rem;
-//   text-decoration: none;
-// }

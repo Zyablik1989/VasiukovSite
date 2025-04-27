@@ -1,5 +1,5 @@
-@import '_variables';
-@import '_theme';
+@import 'variables';
+@import 'theme';
 
 body.light-theme {
   @include theme($light-theme);
@@ -8,4 +8,3 @@ body.light-theme {
 body.dark-theme {
   @include theme($dark-theme);
 }
-
