@@ -6,17 +6,33 @@ import { ThemeService } from '../theme.service';
   standalone: true,
   imports: [],
   templateUrl: './theme-toggle.component.html',
-  styleUrl: './theme-toggle.component.scss'
+//   template: `
+//   <button  (mouseenter)="toggleTheme()">
+//   Toggle Theme
+// </button>
+// `,
+  // styleUrl: './theme-toggle.component.scss'
+    styleUrl: '../../styles.scss'
 })
 export class ThemeToggleComponent {
   private isDark = false;
 
-  constructor(private themeService: ThemeService){}
+  constructor(private themeService: ThemeService){
+    console.log('ThemeService constructed');
 
-  toggleTheme(){
-    this.isDark = !this.isDark;
-    this.themeService.setTheme(this.isDark ? 'dark-theme' : 'light-theme');
+  }
+  testClick(){
+        console.log('Toggle theme called');
 
   }
 
+  toggleTheme(){
+    console.log('Toggle theme called');
+
+    this.isDark = !this.isDark;
+    this.themeService.setTheme(this.isDark ? 'dark-theme' : 'light-theme');
+  }
+  public test(){
+    console.log('Test');
+  }
 }

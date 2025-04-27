@@ -3,6 +3,10 @@
   colors: map-get($theme-map, text )
 }
 
+// .html {
+//   background-color: map-get($map: $theme-map, $key: background) ;
+// }
+
 .button {
   background-color: map-get($map: $theme-map, $key: button-bg);
   color: map-get($theme-map, text);

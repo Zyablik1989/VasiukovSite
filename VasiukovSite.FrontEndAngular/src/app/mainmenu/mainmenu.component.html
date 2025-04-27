@@ -1,0 +1,24 @@
+<p>mainmenu works!</p>
+  <!-- <li *ngFor="let hero of heroes"> -->
+
+    <!-- <li *ngFor="let menuButton of menuButtons; index as i; first as isFirst">
+      {{i}}/{{menuButton.name}}. {{menuButton.link}} <span *ngIf="isFirst">default</span>
+    </li> -->
+
+  <div class="nav-pills-list">
+    <!-- <li > -->
+      <!-- <button type="button"> {{menuButton.name}}
+      </button> -->
+      <a
+        *ngFor="let menuButton of menuButtons"
+        [href]="menuButton.link"
+        class="nav-pill-button"
+        routerLinkActive="active-link"
+        target="_self"
+        rel="opener"
+        >
+      <span>{{menuButton.name}}</span>
+      </a>
+
+    <!-- </li> -->
+  </div>
