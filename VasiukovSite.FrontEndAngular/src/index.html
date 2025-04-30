@@ -11,3 +11,12 @@
   <app-root></app-root>
 </body>
 </html>
+<script>
+  // Function to set preferred theme even before Angular loads
+  (function() {
+    const savedTheme = localStorage.getItem('app-theme');
+    if (savedTheme) {
+      document.body.classList.add(savedTheme);
+    }
+  })();
+</script>
