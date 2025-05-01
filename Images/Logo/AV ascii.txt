@@ -1,0 +1,5 @@
+     A       V       V
+    A A       V     V 
+   A   A       V   V  
+  AAAAAAA       V V   
+ A       A       V    
