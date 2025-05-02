@@ -37,5 +37,6 @@ sudo nginx -t          # Test the configuration for errors
 sudo systemctl reload nginx   # Reload Nginx to apply changes
 
 
+sudo netstat -tuln | grep 5000
 
 sudo tail -n 50 /var/log/nginx/error.log

@@ -21,7 +21,7 @@ app.UseCors("AllowAll");
 //#if DEBUG
 //app.UseHttpsRedirection();
 //#endif
-app.UseAuthorization();
+//app.UseAuthorization();
 
 app.MapControllers();
 
