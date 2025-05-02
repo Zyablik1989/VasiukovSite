@@ -18,10 +18,10 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 app.UseCors("AllowAll");
-
-app.UseHttpsRedirection();
-
-//app.UseAuthorization();
+//#if DEBUG
+//app.UseHttpsRedirection();
+//#endif
+app.UseAuthorization();
 
 app.MapControllers();
 
