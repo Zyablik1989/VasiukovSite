@@ -1,0 +1,14 @@
+# command to make a symbolic link from default available sitest to default enabled
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+
+
+# editing nginx config file 
+sudo nano /etc/nginx/sites-available/default
+
+# Test the configuration for errors
+sudo nginx -t          
+
+
+# Reload Nginx service to apply changes
+sudo systemctl reload nginx   
+

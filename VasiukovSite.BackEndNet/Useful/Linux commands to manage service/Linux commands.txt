@@ -1,0 +1,26 @@
+
+
+
+
+# to test if 5000 port is busy with anything
+sudo netstat -tuln | grep 5000
+
+# check most recent records in Nginx error log
+sudo tail -n 50 /var/log/nginx/error.log
+
+# to create a new file for the service wrapping my app
+sudo nano /etc/systemd/system/VasiukovSite.BackEndNet.API.service
+
+#check out the response of localhost 5000 port app
+curl -v 127.0.0.1:5000
+
+#create a new service in system out of file
+sudo systemctl enable VasiukovSite.BackEndNet.API.service
+# start the service right now
+sudo systemctl start VasiukovSite.BackEndNet.API.service
+
+#check stdout of the service wrapped app
+sudo systemctl status VasiukovSite.BackEndNet.API.service
+
+#restart the service
+sudo systemctl reload VasiukovSite.BackEndNet.API.service
