@@ -2,13 +2,13 @@
  dotnet new webapi -n VasiukovSite.BackEndNet.API --no-openapi -controllers
  
  
- <?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!--
 https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <DeleteExistingFiles>true</DeleteExistingFiles>
+    <DeleteExistingFiles>false</DeleteExistingFiles>
     <ExcludeApp_Data>false</ExcludeApp_Data>
     <LaunchSiteAfterPublish>true</LaunchSiteAfterPublish>
     <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
@@ -21,7 +21,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <TargetFramework>net9.0</TargetFramework>
     <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
     <PublishSingleFile>true</PublishSingleFile>
-    <PublishTrimmed>true</PublishTrimmed>
+    <PublishTrimmed>false</PublishTrimmed>
     <ProjectGuid>42fb1cdf-a21b-4db8-82bb-e1c04c0641f6</ProjectGuid>
     <SelfContained>true</SelfContained>
   </PropertyGroup>
@@ -33,6 +33,25 @@ sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 
 sudo nano /etc/nginx/sites-available/default
 
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+
+        server_name _;
+
+        location / {
+                       proxy_pass http://127.0.0.1:5000;
+       proxy_http_version 1.1;
+       proxy_set_header Upgrade $http_upgrade;
+       proxy_set_header Connection keep-alive;
+       proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+       proxy_cache_bypass $http_upgrade;
+       proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+       proxy_set_header X-Forwarded-Proto $scheme;
+        }
+}
+
 sudo nginx -t          # Test the configuration for errors
 sudo systemctl reload nginx   # Reload Nginx to apply changes
 
@@ -40,3 +59,15 @@ sudo systemctl reload nginx   # Reload Nginx to apply changes
 sudo netstat -tuln | grep 5000
 
 sudo tail -n 50 /var/log/nginx/error.log
+
+sudo nano /etc/systemd/system/VasiukovSite.BackEndNet.API.service
+
+curl -v 127.0.0.1:5000
+
+sudo systemctl enable VasiukovSite.BackEndNet.API.service
+
+sudo systemctl start VasiukovSite.BackEndNet.API.service
+
+sudo systemctl status VasiukovSite.BackEndNet.API.service
+
+sudo systemctl reload VasiukovSite.BackEndNet.API.service
