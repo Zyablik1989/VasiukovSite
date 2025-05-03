@@ -1,0 +1,6 @@
+@VasiukovSite.BackEndNet.API_HostAddress = https://localhost:5000
+
+GET {{VasiukovSite.BackEndNet.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
