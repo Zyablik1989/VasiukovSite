@@ -29,8 +29,8 @@ export class ThemeToggleComponent {
 
   toggleTheme(){
     console.log('Toggle theme called');
-    this.isDark = this.themeService.getCurrentTheme() === 'dark-theme';
-    // this.isDark = !this.isDark;
+    // this.isDark = this.themeService.getCurrentTheme() === 'dark-theme';
+    //Getting the current theme and setting the opposite
     this.themeService.setTheme(this.themeService.getCurrentTheme() === 'light-theme' ? 'dark-theme' : 'light-theme');
   }
   public test(){
