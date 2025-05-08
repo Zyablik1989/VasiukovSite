@@ -14,6 +14,10 @@ sudo nano /etc/systemd/system/VasiukovSite.BackEndNet.API.service
 #check out the response of localhost 5000 port app
 curl -v 127.0.0.1:5000
 
+#check which app listening on particular port
+sudo lsof -i :443
+
+
 #create a new service in system out of file
 sudo systemctl enable VasiukovSite.BackEndNet.API.service
 # start the service right now
