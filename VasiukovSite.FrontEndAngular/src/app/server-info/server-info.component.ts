@@ -12,5 +12,6 @@ import { NgFor } from "@angular/common";
 export class ServerInfoComponent {
  constructor(private httpService: HttpRunner){
   this.httpService.run();
+  var result = this.httpService.run();
  }
 }
