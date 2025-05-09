@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ThemeService } from '../theme.service';
-import { HttpRunner } from '../http.runner';
+
 
 @Component({
   selector: 'app-theme-toggle',
@@ -18,9 +18,9 @@ import { HttpRunner } from '../http.runner';
 export class ThemeToggleComponent {
   private isDark = false;
 
-  constructor(private themeService: ThemeService, private httpService: HttpRunner){
+  constructor(private themeService: ThemeService){
     console.log('ThemeService constructed');
-    this.httpService.run();
+
   }
   testClick(){
         console.log('Toggle theme called');

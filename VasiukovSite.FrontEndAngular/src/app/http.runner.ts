@@ -18,6 +18,7 @@ export class HttpRunner {
     // var b = this.http.get('https://localhost:61096');
 
     this.http.get('http://dotnetwebapi.vasiukov.life').subscribe({
+
       next: (data) => {
         console.log('Received data:', data);
         // You can process your data here
