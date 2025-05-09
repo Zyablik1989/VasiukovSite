@@ -6,14 +6,18 @@ export class HttpRunner {
   private http = inject(HttpClient);
   // This service can now make HTTP requests via `this.http`.
   run(){
-    this.http.get('https://localhost:61096').subscribe(config => {
-      var a = config;
-      // process the configuration.
-    });
+    // this.http.get('http://dotnetwebapi.vasiukov.life').subscribe(config => {
+    //   var a = config;
+    //   // process the configuration.
+    // });
 
-    var b = this.http.get('https://localhost:61096');
+    // this.http.get('https://localhost:61096').subscribe(config => {
+    //   var a = config;
+    //   // process the configuration.
+    // });
+    // var b = this.http.get('https://localhost:61096');
 
-    this.http.get('https://localhost:61096').subscribe({
+    this.http.get('http://dotnetwebapi.vasiukov.life').subscribe({
       next: (data) => {
         console.log('Received data:', data);
         // You can process your data here
