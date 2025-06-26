@@ -1,32 +1,25 @@
 import { HttpClient } from "@angular/common/http";
 import { inject, Injectable } from "@angular/core";
+import { Weather } from "./weather";
+import { map } from 'rxjs/operators'
+import { Observable } from "rxjs";
 
 @Injectable({providedIn: 'root'})
 export class HttpRunner {
-  private http = inject(HttpClient);
-  // This service can now make HTTP requests via `this.http`.
-  run(){
-    // this.http.get('http://dotnetwebapi.vasiukov.life').subscribe(config => {
-    //   var a = config;
-    //   // process the configuration.
-    // });
 
-    // this.http.get('https://localhost:61096').subscribe(config => {
-    //   var a = config;
-    //   // process the configuration.
-    // });
-    // var b = this.http.get('https://localhost:61096');
+    constructor(private http: HttpClient) {}
 
-    this.http.get('http://dotnetwebapi.vasiukov.life').subscribe({
-
-      next: (data) => {
-        console.log('Received data:', data);
-        // You can process your data here
-      },
-      error: (err) => {
-        console.error('Error occurred:', err);
+      getWeather(): Observable<Weather[]>
+      {
+        return this.http.get<any[]>('https://dotnetwebapi.vasiukov.life')
+          .pipe(map(data=>data.map(item => new Weather(
+            new Date(item.date),
+            item.temperatureC,
+            item.temperatureF,
+            item.summary
+          )))
+        );
       }
-    });
-
-  }
 }
+
+
