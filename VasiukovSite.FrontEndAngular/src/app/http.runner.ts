@@ -3,6 +3,8 @@ import { inject, Injectable } from "@angular/core";
 import { Weather } from "./weather";
 import { map } from 'rxjs/operators'
 import { Observable } from "rxjs";
+import { environment } from '../environments/environment';
+
 
 @Injectable({providedIn: 'root'})
 export class HttpRunner {
@@ -11,7 +13,8 @@ export class HttpRunner {
 
       getWeather(): Observable<Weather[]>
       {
-        return this.http.get<any[]>('https://dotnetwebapi.vasiukov.life')
+        let apiUrl = environment.production ? 'https://dotnetwebapi.vasiukov.life' : 'http://localhost:61096';
+        return this.http.get<any[]>(apiUrl)
           .pipe(map(data=>data.map(item => new Weather(
             new Date(item.date),
             item.temperatureC,

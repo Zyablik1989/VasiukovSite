@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { MainmenuComponent } from "./mainmenu/mainmenu.component";
 import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
 import { ServerInfoComponent } from './server-info/server-info.component';
-
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +14,10 @@ import { ServerInfoComponent } from './server-info/server-info.component';
 })
 export class AppComponent {
   title = 'vasiukov-website';
+
   handleClick() {
     console.log('Button was clicked!');
+      console.log(environment.production);
+
   }
 }
