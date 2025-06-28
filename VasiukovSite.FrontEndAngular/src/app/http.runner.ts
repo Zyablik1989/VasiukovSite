@@ -13,7 +13,7 @@ export class HttpRunner {
 
       getWeather(): Observable<Weather[]>
       {
-        let apiUrl = environment.production ? 'https://dotnetwebapi.vasiukov.life' : 'http://localhost:61096';
+        let apiUrl = environment.apiUrl;
         return this.http.get<any[]>(apiUrl)
           .pipe(map(data=>data.map(item => new Weather(
             new Date(item.date),
@@ -23,6 +23,5 @@ export class HttpRunner {
           )))
         );
       }
-}
 
 
