@@ -4,22 +4,26 @@
     <!-- <li *ngFor="let menuButton of menuButtons; index as i; first as isFirst">
       {{i}}/{{menuButton.name}}. {{menuButton.link}} <span *ngIf="isFirst">default</span>
     </li> -->
-
+<nav>
   <div class="nav-pills-list">
     <!-- <li > -->
       <!-- <button type="button"> {{menuButton.name}}
       </button> -->
       <a
         *ngFor="let menuButton of menuButtons"
-        [href]="menuButton.link"
+        routerLink={{menuButton.link}}
+        routerLinkActive="activebutton"
         class="nav-pill-button"
-        routerLinkActive="active-link"
+
         ariaCurrentWhenActive="page"
-        target="_self"
-        rel="opener"
         >
+        <!-- routerLinkActive="active-link" -->
+<!--
+        target="_self"
+        rel="opener" -->
       <span>{{menuButton.name}}</span>
       </a>
 
     <!-- </li> -->
   </div>
+</nav>

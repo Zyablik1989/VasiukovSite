@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
-import { RouterLinkActive } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-mainmenu',
   standalone: true,
-  imports: [NgFor, RouterLinkActive],
+  imports: [NgFor, RouterLink, RouterLinkActive, ],
   templateUrl: './mainmenu.component.html',
   styleUrl: '../../styles.scss'
 })

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { MainmenuComponent } from "./mainmenu/mainmenu.component";
 import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
 import { ServerInfoComponent } from './server-info/server-info.component';
