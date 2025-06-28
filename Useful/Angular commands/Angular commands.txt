@@ -2,3 +2,5 @@ REM Runs angular with environment set in angular.json (development by defailt). 
 ng serve -o --watch
 REM Building the site to dist folder ensuring it will be in production environment with all optimizations applied, ready to deploy 
 ng build --configuration production
+REM  cleans local cache of website, useful when working on the other machine to ensure rebuild
+ng cache clean
