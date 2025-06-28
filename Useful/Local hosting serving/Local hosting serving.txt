@@ -1,0 +1,4 @@
+REM installin tool to serve prod server locally
+npm install -g serve
+REM run local serve of prod server
+serve -s .\dist\vasiukov-website\browser\
