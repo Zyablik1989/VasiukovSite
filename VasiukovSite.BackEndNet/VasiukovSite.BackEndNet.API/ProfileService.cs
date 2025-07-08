@@ -1,4 +1,6 @@
-﻿namespace VasiukovSite.BackEndNet.API
+﻿using VasiukovSite.BackEndNet.API.Models;
+
+namespace VasiukovSite.BackEndNet.API
 {
     public class ProfileService : IProfileService
     {
