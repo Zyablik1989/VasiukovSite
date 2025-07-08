@@ -1,4 +1,4 @@
-namespace VasiukovSite.BackEndNet.API;
+namespace VasiukovSite.BackEndNet.API.Models;
 
 public class WeatherForecast
 {
