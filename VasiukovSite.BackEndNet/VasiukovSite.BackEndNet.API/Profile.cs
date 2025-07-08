@@ -23,7 +23,8 @@
             {
                 return $@"I am working on WPF projects mostly. At the moment I've been honored to make my part in multicultural companies located in Canada, Portugal, Switzerland and Russia.
 Next step for me will be switching to Angular javascript framework and have .NET as backend (just like I do for this personal website). 
-My knowledge in SQLite and MS SQL I'd like to also apply to implement assets retrieval for this site.";
+My knowledge in SQLite and MS SQL I'd like to also apply to implement assets retrieval for this site.
+Backend server with an API for this website placed on dedicated Ubuntu linux behind nginx and https-certified just as the site itself.";
             }
         }
     }
