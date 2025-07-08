@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using VasiukovSite.BackEndNet.API.Models;
 
 namespace VasiukovSite.BackEndNet.API.Controllers
 {
@@ -19,9 +20,9 @@ namespace VasiukovSite.BackEndNet.API.Controllers
 
         [HttpGet]
         [Route("profileData")]
-        public IProfileService getProfileData()
+        public Profile GetProfileData()
         {
-            return _profileService;
+            return _profileService.Profile;
         }
     }
 }

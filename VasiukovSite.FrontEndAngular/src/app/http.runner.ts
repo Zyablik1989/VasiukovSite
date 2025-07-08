@@ -40,9 +40,9 @@ export class HttpRunner {
 
         let profile = this.http.get<any>(apiProfileUrl)
           .pipe(map(data=> new Profile(
-          data.profile.name,
-          data.profile.occupation,
-          data.profile.occupationDetails
+          data.name,
+          data.occupation,
+          data.occupationDetails
         )));
         return profile;
       }
